@@ -27,7 +27,7 @@ npm i polygon-info
 takes a single argument - sides ,of type number and returns a promise
 
 ```javascript
-import {polygonInfo} from "polygonInfo";
+import {polygonInfo} from "polygon-info";
 
 const polygonData = await polygonInfo(3);
 
@@ -54,7 +54,7 @@ takes a single argument - n ,of type number and returns a promise
 when resolved returns polygon data same as from module polygonInfo but for n no of polygons.
 
 ```javascript
-import {nPolygonInfo} from "polygonInfo";
+import {nPolygonInfo} from "polygon-info";
 
 const nPolygonData = await nPolygonInfo(10);
 ```
@@ -66,7 +66,7 @@ including the one that is obtained by dividing the polygon from the center.
 angleData is provided by either polygonInfo or nPolygonInfo module.
 
 ```javascript
-import {polygonInfo, polygramTriangles} from "polygonInfo";
+import {polygonInfo, polygramTriangles} from "polygon-info";
 
 const [{angleData}] = await polygonInfo(7);
 const polygramTrianglesData = await polygramTriangles(angleData);
@@ -81,8 +81,8 @@ console.log(polygramTrianglesData);
  // ]
 ```
 
-# to run tests
+##test
+```
 npm test
-
-
+```
 

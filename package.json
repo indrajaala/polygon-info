@@ -1,6 +1,10 @@
 {
   "name": "polygon-info",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indrajaala/polygon-info"
+  },
   "description": "properties of regular polygons",
   "main": "polygonInfo.js",
   "scripts": {
