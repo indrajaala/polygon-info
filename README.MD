@@ -2,6 +2,10 @@
 
 properties of regular polygons.
 
+
+[![pipeline status](https://gitlab.com/indrajaala/polygon-info/badges/master/pipeline.svg)](https://gitlab.com/indrajaala/polygon-info/-/commits/master)
+
+
 ## Usage
 
 Install with npm
