@@ -17,7 +17,7 @@ npm i polygon-info
 
 3.polygramTriangles
 
-####1. polygonInfo
+###1. polygonInfo
 
 takes a single argument - sides ,of type number and returns a promise
 
@@ -43,7 +43,7 @@ console.log(polygonData);
  //       ]
 
 ```
-####2. nPolygonInfo
+###2. nPolygonInfo
 
 takes a single argument - n ,of type number and returns a promise 
 when resolved returns polygon data same as from module polygonInfo but for n no of polygons.
@@ -53,7 +53,7 @@ import {nPolygonInfo} from "polygonInfo";
 
 const nPolygonData = await nPolygonInfo(10);
 ```
-####3. polygramTriangles
+###3. polygramTriangles
 
 takes a single argument - angleData , of type array and returns a promise
 when resolved returns polygram triangles data , different types of triangles (NOT total triangles) present in a polygram,
