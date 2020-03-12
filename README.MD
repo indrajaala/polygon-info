@@ -50,7 +50,7 @@ console.log(polygonData);
 ```
 ####  ( 2.nPolygonInfo )
 
-takes a single argument - n ,of type number and returns a promise 
+takes a single argument - n ,of type number and returns a promise, 
 when resolved returns polygon data same as from module polygonInfo but for n no of polygons.
 
 ```javascript
@@ -60,7 +60,7 @@ const nPolygonData = await nPolygonInfo(10);
 ```
 #### ( 3.polygramTriangles )
 
-takes a single argument - angleData , of type array and returns a promise
+takes a single argument - angleData , of type array and returns a promise, 
 when resolved returns polygram triangles data , different types of triangles (NOT total triangles) present in a polygram,
 including the one that is obtained by dividing the polygon from the center.
 angleData is provided by either polygonInfo or nPolygonInfo module.
