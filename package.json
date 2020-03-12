@@ -1,0 +1,31 @@
+{
+  "name": "polygon-info",
+  "version": "1.0.0",
+  "description": "properties of regular polygons",
+  "main": "polygonInfo.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "geometry",
+    "regular polygon",
+    "polygon",
+    "polygon properties",
+    "polygram",
+    "triangle",
+    "angles"
+  ],
+
+  "files": [
+    "polygonInfo.js",
+    "polygramTriangles.js"
+  ],
+  "author": "indrajaala",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0"
+  }
+}
