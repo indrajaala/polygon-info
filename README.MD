@@ -29,9 +29,9 @@ takes a single argument - sides ,of type number and returns a promise
 ```javascript
 import {polygonInfo} from "polygon-info";
 
-const polygonData = async ()=> await polygonInfo(3);
+const polygonData = await polygonInfo(3);
 
- // await polygonData(); 
+ // polygonData; 
 
  //       [
  //        {
@@ -57,7 +57,7 @@ when resolved returns polygon data same as from module polygonInfo but for n no 
 ```javascript
 import {nPolygonInfo} from "polygon-info";
 
-const nPolygonData = async ()=> await nPolygonInfo(10);
+const nPolygonData = await nPolygonInfo(10);
 ```
 ####  3.polygramTriangles
 
@@ -69,10 +69,10 @@ angleData is provided by either polygonInfo or nPolygonInfo module.
 ```javascript
 import {polygonInfo, polygramTriangles} from "polygon-info";
 
-const [{angleData}] = async ()=> await polygonInfo(7);
-const polygramTrianglesData = async ()=> await polygramTriangles(angleData);
+const [{angleData}] = await polygonInfo(7);
+const polygramTrianglesData = await polygramTriangles(angleData);
  
- // await polygramTrianglesData();
+ // polygramTrianglesData;
  //
  // [
  //   [ 25.714285714285715, 25.714285714285715, 128.57142857142858 ]
