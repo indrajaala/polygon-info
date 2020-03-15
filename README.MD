@@ -29,9 +29,9 @@ takes a single argument - sides ,of type number and returns a promise
 ```javascript
 import {polygonInfo} from "polygon-info";
 
-const polygonData = await polygonInfo(3);
+const polygonData = async ()=> await polygonInfo(3);
 
-console.log(polygonData); 
+ // polygonData(); 
 
  //       [
  //        {
@@ -42,12 +42,13 @@ console.log(polygonData);
  //          sumOfExteriorAngles: 360,
  //          interiorAngleHalf: 30,
  //          exteriorAngleHalf: 60,
- //           diagonals: 0,
+ //          diagonals: 0,
  //          angleData: [ 60, 120, 30, 60, 60 ]
  //         }
  //       ]
 
 ```
+
 ####  ( 2.nPolygonInfo )
 
 takes a single argument - n ,of type number and returns a promise, 
@@ -56,7 +57,7 @@ when resolved returns polygon data same as from module polygonInfo but for n no 
 ```javascript
 import {nPolygonInfo} from "polygon-info";
 
-const nPolygonData = await nPolygonInfo(10);
+const nPolygonData = async ()=> await nPolygonInfo(10);
 ```
 #### ( 3.polygramTriangles )
 
@@ -68,10 +69,11 @@ angleData is provided by either polygonInfo or nPolygonInfo module.
 ```javascript
 import {polygonInfo, polygramTriangles} from "polygon-info";
 
-const [{angleData}] = await polygonInfo(7);
-const polygramTrianglesData = await polygramTriangles(angleData);
-console.log(polygramTrianglesData);
-
+const [{angleData}] = async ()=> await polygonInfo(7);
+const polygramTrianglesData = async ()=> await polygramTriangles(angleData);
+ 
+ // polygramTrianglesData();
+ //
  // [
  //   [ 25.714285714285715, 25.714285714285715, 128.57142857142858 ]
  //   [ 25.714285714285715, 51.42857142857143, 102.85714285714286 ]
@@ -81,7 +83,8 @@ console.log(polygramTrianglesData);
  // ]
 ```
 
-##test
+##  test
+
 ```
 npm test
 ```
