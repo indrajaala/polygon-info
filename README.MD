@@ -31,7 +31,7 @@ import {polygonInfo} from "polygon-info";
 
 const polygonData = async ()=> await polygonInfo(3);
 
- // polygonData(); 
+ // await polygonData(); 
 
  //       [
  //        {
@@ -72,7 +72,7 @@ import {polygonInfo, polygramTriangles} from "polygon-info";
 const [{angleData}] = async ()=> await polygonInfo(7);
 const polygramTrianglesData = async ()=> await polygramTriangles(angleData);
  
- // polygramTrianglesData();
+ // await polygramTrianglesData();
  //
  // [
  //   [ 25.714285714285715, 25.714285714285715, 128.57142857142858 ]
