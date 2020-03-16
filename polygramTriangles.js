@@ -18,17 +18,12 @@ const k_combinations = (set, k) => {
     return combs;
 };
 
-const combinations = async (arr) => {
-    let combinations = [];
-    k_combinations(arr, 3).forEach((data) => {
-        let sum = data.reduce((acc, val) => {
-            return acc + val;
-        });
-        if (sum.toFixed(0) === "180") {
-            combinations.push(data.sort((x, y) => (x - y)));
-        }
-    });
-    return combinations;
+const combinations = (arr) => {
+    return new Promise((async resolve => {
+        const combinations = await k_combinations(arr, 3)
+            .filter((data) => data.reduce((acc, val) => acc + val) === 180);
+        resolve(combinations);
+    }));
 };
 
 const repetitiveCombinations = (arr) => {
@@ -36,8 +31,8 @@ const repetitiveCombinations = (arr) => {
         let repetitiveCombinations = [];
         for (let i = 0; i <= arr.length - 1; i++) {
             for (let j = 0; j <= arr.length - 1; j++) {
-                if ((arr[i] + arr[j] + arr[j]).toFixed(0) === "180") {
-                    repetitiveCombinations.push([arr[i], arr[j], arr[j]].sort((x, y) => (x - y)));
+                if ((arr[i] + arr[j] + arr[j]) === 180) {
+                    repetitiveCombinations.push([arr[i], arr[j], arr[j]]);
                 }
             }
         }
@@ -45,15 +40,20 @@ const repetitiveCombinations = (arr) => {
     }));
 };
 
-const removeDuplicateArrays = (arrOfArrs) => {
-    let t = {};
+const sortAndRemoveDupArrs = (arrOfArrs) => {
+    const temp = {};
     return arrOfArrs.filter((arr) => {
-        return !(t[arr] = arr in t)
+        return !(temp[arr.sort((x, y) => (x - y))] = arr in temp);
     });
 };
 
 const polygramTriangles = async (angleData) => {
-    return removeDuplicateArrays([...await combinations(angleData), ...await repetitiveCombinations(angleData)]);
+    return sortAndRemoveDupArrs(
+        [
+            ...await combinations(angleData),
+            ...await repetitiveCombinations(angleData)
+        ]
+    );
 };
 
 export {polygramTriangles};
