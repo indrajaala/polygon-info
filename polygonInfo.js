@@ -28,6 +28,9 @@ const diagonals = (n) => {
     return (n * (n - 3)) / 2;
 };
 
+const characteristicTriangle =(n) => {
+    return [interiorAngle(n) / 2, interiorAngle(n) / 2, exteriorAngle(n)]
+};
 
 const angleData = (sides) => {
     const minTriangles = sides - 2;
@@ -54,6 +57,7 @@ const polygonData = async (sides) => {
         interiorAngleHalf: interiorAngleHalf(sides),
         exteriorAngleHalf: exteriorAngleHalf(sides),
         diagonals: diagonals(sides),
+        characteristicTriangle: characteristicTriangle(sides),
         angleData: angleData(sides),
     }
 };
