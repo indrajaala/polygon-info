@@ -4,19 +4,28 @@ describe("polygonInfo", () => {
 
     test('triangle has 3 sides', async () => {
         const data = await polygonInfo(3);
-        expect(data[0].sides).toEqual(3);
+        expect(data.sides).toEqual(3);
     });
 
     test("pentagon has 3 polygram triangles", async () => {
-        const [{angleData}] = await polygonInfo(5);
+        const {angleData} = await polygonInfo(5);
         const polygramData = await polygramTriangles(angleData);
         expect(polygramData.length).toEqual(3);
+    });
+
+    test("heptagon and octagon has correct characteristic triangle values", async () => {
+        const heptagon = await polygonInfo(7);
+        const octagon = await polygonInfo(8);
+        expect(heptagon.characteristicTriangle)
+            .toEqual(expect.arrayContaining([64.28571428571429, 64.28571428571429, 51.42857142857143]));
+        expect(octagon.characteristicTriangle)
+            .toEqual(expect.arrayContaining([67.5, 67.5, 45]));
     });
 });
 
 describe("polygramTriangles", () => {
     test("heptagon has 5 polygram triangles and has correct values", async () => {
-        const [{angleData}] = await polygonInfo(7);
+        const {angleData} = await polygonInfo(7);
         const polygramData = await polygramTriangles(angleData);
         expect(polygramData.length).toEqual(5);
         const triangleData = [

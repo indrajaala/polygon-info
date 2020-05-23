@@ -28,7 +28,7 @@ const diagonals = (n) => {
     return (n * (n - 3)) / 2;
 };
 
-const characteristicTriangle =(n) => {
+const characteristicTriangle = (n) => {
     return [interiorAngle(n) / 2, interiorAngle(n) / 2, exteriorAngle(n)]
 };
 
@@ -63,7 +63,7 @@ const polygonData = async (sides) => {
 };
 
 const polygonInfo = async (sides) => {
-    return [await polygonData(sides)];
+    return await polygonData(sides);
 };
 
 const nPolygonInfo = async (n) => {
