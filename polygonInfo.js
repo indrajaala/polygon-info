@@ -1,4 +1,4 @@
-import {polygramTriangles} from "./polygramTriangles"
+import {polygramTriangles} from "./polygramTriangles.js"
 
 const interiorAngle = (n) => {
     return ((n - 2) * 180) / n;
