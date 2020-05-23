@@ -29,23 +29,24 @@ takes a single argument - sides ,of type number and returns a promise
 ```javascript
 import {polygonInfo} from "polygon-info";
 
-const polygonData = await polygonInfo(3);
+const triangle = await polygonInfo(3);
 
- // polygonData; 
+// triangle; 
+//
+// {
+//  sides: 3,
+//  interiorAngle: 60,
+//  exteriorAngle: 120,
+//  sumOfInteriorAngles: 180,
+//  sumOfExteriorAngles: 360,
+//  interiorAngleHalf: 30,
+//  exteriorAngleHalf: 60,
+//  diagonals: 0,
+//  characteristicTriangle: [ 30, 30, 120 ],
+//  angleData: [ 60, 120, 30, 60, 60 ]
+// }
 
- //       [
- //        {
- //          sides: 3,
- //          interiorAngle: 60,
- //          exteriorAngle: 120,
- //          sumOfInteriorAngles: 180,
- //          sumOfExteriorAngles: 360,
- //          interiorAngleHalf: 30,
- //          exteriorAngleHalf: 60,
- //          diagonals: 0,
- //          angleData: [ 60, 120, 30, 60, 60 ]
- //         }
- //       ]
+
 
 ```
 
@@ -69,10 +70,10 @@ angleData is provided by either polygonInfo or nPolygonInfo module.
 ```javascript
 import {polygonInfo, polygramTriangles} from "polygon-info";
 
-const [{angleData}] = await polygonInfo(7);
-const polygramTrianglesData = await polygramTriangles(angleData);
+const {angleData} = await polygonInfo(7);
+const polygramTriangles = await polygramTriangles(angleData);
  
- // polygramTrianglesData;
+ // polygramTriangles;
  //
  // [
  //   [ 25.714285714285715, 25.714285714285715, 128.57142857142858 ]
