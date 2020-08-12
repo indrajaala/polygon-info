@@ -1,4 +1,4 @@
-import {polygonInfo, polygramTriangles, nPolygonInfo} from "../polygonInfo";
+import {polygonInfo, polygramTriangles, nPolygonInfo} from "../src/polygonInfo";
 
 describe("polygonInfo", () => {
 

@@ -63,6 +63,9 @@ typings/
 # ide
 .idea
 
+#dist
+dist
+
 # scratch files
 
 scratch.js
