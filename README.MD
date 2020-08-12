@@ -1,11 +1,10 @@
 # polygon-info
 
+[![npm][npm-img]][npm-url]
+[![pipeline status][pipeline-status-img]][repo-url]
+[![coverage report][coverage-report-img]][repo-url]
+
 properties of regular polygons.
-
-
-[![pipeline status](https://gitlab.com/indrajaala/polygon-info/badges/master/pipeline.svg)](https://gitlab.com/indrajaala/polygon-info/-/commits/master)
-[![coverage report](https://gitlab.com/indrajaala/polygon-info/badges/master/coverage.svg)](https://gitlab.com/indrajaala/polygon-info/-/commits/master)
-
 
 ## Usage
 
@@ -89,4 +88,13 @@ const polygramTriangles = await polygramTriangles(angleData);
 ```
 npm test
 ```
+## License
+
+MIT
+
+[npm-img]: https://img.shields.io/npm/v/polygon-info.svg
+[npm-url]: https://npmjs.com/package/polygon-info
+[pipeline-status-img]: https://gitlab.com/indrajaala/polygon-info/badges/master/pipeline.svg
+[coverage-report-img]: https://gitlab.com/indrajaala/polygon-info/badges/master/coverage.svg
+[repo-url]: https://gitlab.com/indrajaala/polygon-info/commits/master
 
